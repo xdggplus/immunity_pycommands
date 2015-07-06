@@ -95,7 +95,7 @@ def printCallStack(imm, calledAt):
         arg_dump = st_arg.getProcedure()
         if "Includes" in arg_dump:
             continue
-        imm.log("> %s" % arg_dump)
+        imm.log("> %s" % arg_dump, calledAt)
 
 def getParams(imm, calledAt):
     esp = getRegValue(imm, 'esp')
